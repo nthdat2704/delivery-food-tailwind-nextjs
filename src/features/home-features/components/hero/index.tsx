@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { herofood } from '../../assets';
 interface HeroProps {}
 
-const Hero = (props: HeroProps) => {
+export const Hero = (props: HeroProps) => {
     return (
         <div className="min-h-[880px] overflow-hidden bg-hero">
             <div className="container flex items-center">
@@ -21,5 +21,3 @@ const Hero = (props: HeroProps) => {
         </div>
     );
 };
-
-export default Hero;
