@@ -1,2 +1,3 @@
 import logo from "./logo.png";
-export { logo };
+import iphone from "./iphone.png";
+export { logo, iphone };
