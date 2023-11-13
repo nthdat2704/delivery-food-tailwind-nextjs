@@ -14,7 +14,7 @@ const Header = (props: HeaderProps) => {
                     <Image src={logo} width={100} height={48} className="object-contain" alt="logo" />
                 </Link>
                 <ul className="flex gap-[60px] text-white text-base">
-                    {MENU_LIST.map((item) => (
+                    {MENU_LIST.map((item, index) => (
                         <li key={item.id} className="hover:text-orange">
                             <Link href={item.link}>{item.title}</Link>
                         </li>

@@ -9,10 +9,10 @@ interface SocialNetworkProps {
 const SocialNetwork = ({ className }: SocialNetworkProps) => {
     return (
         <div className={`flex gap-2 items-center ${className}`}>
-            {socialNetwork.map((item) => {
+            {socialNetwork.map((item, index) => {
                 const Icon = item.icon;
                 return (
-                    <div>
+                    <div key={index}>
                         <Button roundedFull={true} makeCircle={true} size="small">
                             <Icon />
                         </Button>

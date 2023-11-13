@@ -23,7 +23,7 @@ const Chip = ({
     upperCase = false,
 }: ChipProps) => {
     const classes = classNames(
-        'px-4 gap-[10px] rounded text-white font-dm text-base',
+        'px-4 gap-[10px] rounded text-white font-dm text-base inline-block cursor-pointer',
         {
             'flex items-center': startContent || endContent,
             'flex items-center justify-center': makeCenter,
