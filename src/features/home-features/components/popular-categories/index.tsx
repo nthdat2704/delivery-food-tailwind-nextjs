@@ -5,7 +5,7 @@ import Slider from '@/shared/components/slider';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { categories } from '../../mockup/categories';
+import { categories } from '../../mockup';
 
 interface PopularCategoriesProps {}
 export const PopularCategories = (props: PopularCategoriesProps) => {
@@ -20,11 +20,11 @@ export const PopularCategories = (props: PopularCategoriesProps) => {
                 </h1>
                 <Slider
                     data={categories}
-                    InnerComponent={<CardCategories />}
+                    renderComponent={<CardCategories />}
                     className="!hidden max-md:!block rounded-md"
                 />
                 <div className="grid grid-cols-6 max-lg:grid-cols-3 max-md:hidden gap-[30px] w-full">
-                    {categories.map((item) => {
+                    {categories.map((item, index) => {
                         return (
                             <CardCategories
                                 key={item.id}

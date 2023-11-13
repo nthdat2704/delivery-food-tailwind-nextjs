@@ -2,26 +2,37 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import classNames from 'classnames';
-import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+import { SwiperOptions } from 'swiper/types';
 import './slide.css';
-type SliderProps = {
+interface SliderProps extends SwiperOptions {
     data?: any[];
-    InnerComponent?: any; // this props will render passed component into SwiperSlide component
+    renderComponent?: any; // this props will render passed component into SwiperSlide component
     spacing?: number;
+    slidesPerView?: number;
     className?: string;
-};
+}
 
-const Slider = ({ data, InnerComponent, className, spacing = 20 }: SliderProps) => {
-    const classes = classNames('mySwiper', className);
+const Slider = ({ data, renderComponent, className, spacing = 20, slidesPerView = 1, ...passProps }: SliderProps) => {
+    const classes = classNames('mySwiper rounded-md', className);
     return (
-        <Swiper spaceBetween={spacing} pagination={true} modules={[Pagination]} className={classes}>
-            {data?.map((item) => {
-                const Component = { ...InnerComponent, props: { ...item } };
-                return <SwiperSlide>{Component}</SwiperSlide>;
-            })}
-        </Swiper>
+        <div className="w-full relative">
+            <Swiper
+                spaceBetween={spacing}
+                slidesPerView={slidesPerView}
+                pagination={true}
+                modules={[Pagination]}
+                className={classes}
+                {...passProps}
+            >
+                {data?.map((item, index) => {
+                    const Component = { ...renderComponent, props: { ...item } };
+                    return <SwiperSlide key={index}>{Component}</SwiperSlide>;
+                })}
+            </Swiper>
+        </div>
     );
 };
 
