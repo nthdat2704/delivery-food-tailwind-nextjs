@@ -1,7 +1,7 @@
-import { StarIcon } from '@/shared/icons';
 import classNames from 'classnames';
 import Image, { StaticImageData } from 'next/image';
 import Chip from '../chip/chip';
+import { StarIcon } from '@/features/home-features/icons';
 interface CardProps {
     media?: string | StaticImageData;
     image?: string | StaticImageData;

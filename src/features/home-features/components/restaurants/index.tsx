@@ -2,12 +2,13 @@
 import Card from '@/shared/components/card';
 import Chip from '@/shared/components/chip/chip';
 import Slider from '@/shared/components/slider';
-import { restaurants } from '../../mockup';
 import Image from 'next/image';
-import { circleleft, circleleftmobile, circleright, circlerightmobile, restauranthero } from '@/shared/assets';
-import Input from '@/shared/components/input';
-import { MarkIcon } from '../../icons';
+import { restaurants } from '../../mockup';
+
 import Button from '@/shared/components/button';
+import Input from '@/shared/components/input';
+import { circleleft, circleleftmobile, circleright, circlerightmobile, restauranthero } from '../../assets';
+import { MarkIcon } from '../../icons';
 
 interface RestaurantsProps {}
 

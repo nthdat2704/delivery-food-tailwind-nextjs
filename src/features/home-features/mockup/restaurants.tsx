@@ -1,4 +1,4 @@
-import { restaurant1, restaurant2, restaurant3, restaurant4 } from '@/shared/assets';
+import { restaurant1, restaurant2, restaurant3, restaurant4 } from '../assets';
 
 export const restaurants = [
     {

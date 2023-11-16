@@ -62,7 +62,6 @@ const config: Config = {
       backgroundImage: {
         'hero': "url('/hero-background.png')",
         'hero-mobile': "url('/hero-background-mobile.png')",
-        'iphone': "url('/iphone.png')",
       },
       boxShadow: {
         cardhover: "10px 20px 40px 0px rgba(97, 49, 0, 0.20)",

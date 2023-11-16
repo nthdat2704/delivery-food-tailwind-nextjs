@@ -11,7 +11,7 @@ type InputProps = {
 
 const Input = ({ type = 'text', placeHolder, startContent, endContent, className, onChange }: InputProps) => {
     const classes = classNames(
-        'flex items-center gap-3 relative bg-white rounded-md overflow-hidden pl-4',
+        'flex items-center gap-3 relative bg-white rounded-md overflow-hidden pl-4 w-full',
         {},
         className,
     );

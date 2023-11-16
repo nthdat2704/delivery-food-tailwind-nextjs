@@ -1,4 +1,4 @@
-import { deal1, deal2, deal3, deal4, deal5, deal6 } from '@/shared/assets';
+import { deal1, deal2, deal3, deal4, deal5, deal6 } from '../assets';
 
 export const bestDeals = [
     {
